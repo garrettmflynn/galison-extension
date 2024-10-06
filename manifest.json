@@ -1,0 +1,14 @@
+{
+    "name": "Galison Forever",
+    "description": "A fun extension for Alison and Garrett",
+    "version": "1.0",
+    "action": {
+      "default_popup": "popup/popup.html",
+      "default_icon": "images/engagement.png"
+    },
+    "incognito": "split",
+    "chrome_url_overrides": {
+      "newtab": "new_tab/new_tab.html"
+    },
+    "manifest_version": 3
+  }
