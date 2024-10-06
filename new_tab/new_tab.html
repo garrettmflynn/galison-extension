@@ -2,14 +2,32 @@
   <head>
     <title>Galison Forever</title>
     <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+        }
+
       body {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
-        font-size: 2rem;
         font-family: 'Arial', sans-serif;
-        color: #cccccc;
+        color: #929292;
+      }
+
+      body > div {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+
+      }
+
+      #message {
+        font-size: 2rem;
       }
 
       #adjective {
@@ -20,7 +38,9 @@
     <script type="module" src="./new_tab.js"></script>
   </head>
   <body>
-    <iframe src="../sandbox.html" id="sandbox" style="display: none"></iframe>
-    <span id="message">You are <span id="adjective"></span>.</span>
+    <div>
+        <span id="message">You are <span id="adjective"></span>.</span>
+        <small>From Garrett</small>
+    </div>
   </body>
 </html>
