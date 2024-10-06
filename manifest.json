@@ -4,7 +4,7 @@
     "version": "1.0",
     "action": {
       "default_popup": "popup/popup.html",
-      "default_icon": "images/engagement.png"
+      "default_icon": "images/engagement_square.png"
     },
     "incognito": "split",
     "chrome_url_overrides": {
