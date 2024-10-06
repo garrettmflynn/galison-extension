@@ -66,11 +66,18 @@ const updateMessage = (messages, idx = chooseRandomIdx(messages)) =>  {
     // message.innerText = messages[idx]
 }
 
-onLoaded(async () => {
+const getCurrentMessages = async () => {
     const text = getState(url)
     const state = text ? parseSheet(text) : await updateSheetState(url)
     if (text) updateSheetState(url) // Always update sheet state in the background to add new messages
     const messages = state.data.map(row => row['Message'])
+    return messages
+}
+
+const promise = getCurrentMessages()
+
+onLoaded(async () => {
+    const messages = await promise
     const idx = (getState('idx') || 0 )% messages.length
     updateMessage(messages, idx)
     setState('idx', idx)
